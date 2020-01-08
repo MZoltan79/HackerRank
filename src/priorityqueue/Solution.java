@@ -33,6 +33,7 @@ public class Solution {
 					System.out.println(st.getName());
 				}
 			}
+			scan.close();
 			br.close();
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block

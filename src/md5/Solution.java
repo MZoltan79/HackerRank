@@ -9,7 +9,6 @@ public class Solution {
 
 	public static void main(String[] args) throws NoSuchAlgorithmException {
 
-		String hash = "35454B055CC325EA1AF2126E27707052";
 	    String password = "HelloWorld";
 	         
 //	    MessageDigest md = MessageDigest.getInstance("SHA-256"); // works the same way!!!

@@ -18,6 +18,7 @@ public class Solution {
 	        while(!(IP = in.next()).equals("exit")){
 	            System.out.println(IP.matches(new MyRegex().pattern));
 	        }
+	        in.close();
 
 	    }
 }

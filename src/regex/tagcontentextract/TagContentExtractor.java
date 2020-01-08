@@ -11,15 +11,12 @@ public class TagContentExtractor {
 		String s3 = "<Amee>safat codes like a ninja</amee>";
 		String s4 = "<SA premium>Imtiaz has a secret crush</SA premium>";
 		
-//		String regex = "(<.*>)+([^<>].)*(<.*>)";
 		String regex = "<(.+)>([^<]+)</\\1>";
 		Pattern pattern = Pattern.compile(regex);
 		Matcher matcher = pattern.matcher(s1);
 		while(matcher.find()) {
 			System.out.println(matcher.group(2));
-//			s1 = s1.replaceAll(matcher.group(), matcher.group(2));
 		}
-//		System.out.println(s1);
 	}
 
 }

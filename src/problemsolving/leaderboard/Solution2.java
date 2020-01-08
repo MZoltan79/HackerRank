@@ -43,8 +43,8 @@ public class Solution2 {
 
 
     public static void main(String[] args) throws IOException {
-    	PrintWriter pw = new PrintWriter(
-    			new FileWriter(new File("solution2.txt")));
+//    	PrintWriter pw = new PrintWriter(
+//    			new FileWriter(new File("solution2.txt")));
     	BufferedReader br = new BufferedReader(
     			new FileReader("leaderboard6.txt"));
     	Scanner scanner = new Scanner(br);

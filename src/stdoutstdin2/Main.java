@@ -11,6 +11,7 @@ public class Main {
 		double d = scan.nextDouble();
 		scan.nextLine();
 		String s = scan.nextLine();
+		scan.close();
 		
 		System.out.println(s);
 		System.out.println(d);

@@ -1,20 +1,6 @@
 package patterns.visitor;
 
-import java.util.ArrayList;
-
-import java.io.*;
-
 import java.util.*;
-
-import java.text.*;
-
-import java.math.*;
-
-import java.util.regex.*;
-
-import java.util.ArrayList;
-
-import java.util.Scanner;
 
 enum Color {
 
@@ -217,85 +203,45 @@ public class Solution {
 	public static Tree solve() {
 
 		Scanner in = new Scanner(System.in);
-
 		int numberOfNodes = in.nextInt();
-
 		nodeValues = new int[numberOfNodes];
-
 		for (int index = 0; index < numberOfNodes; index++) {
-
 			nodeValues[index] = in.nextInt();
-
 		}
-
 		nodeColors = new Color[numberOfNodes];
-
 		for (int index = 0; index < numberOfNodes; index++) {
-
 			nodeColors[index] = (in.nextInt() == 0) ? Color.RED : Color.GREEN;
-
 		}
-
 		Tree rootNode;
-
 		if (numberOfNodes == 1) {
-
 			rootNode = new TreeLeaf(nodeValues[0], nodeColors[0], 0);
-
-		}
-
-		else {
-
+		} else {
 			for (int index = 0; index < (numberOfNodes - 1); index++) {
-
 				int u = in.nextInt();
-
 				int v = in.nextInt();
-
 				Set<Integer> uEdges = nodesMap.get(u);
-
 				if (uEdges == null) {
-
 					uEdges = new HashSet<>();
-
 				}
-
 				uEdges.add(v);
-
 				nodesMap.put(u, uEdges);
-
 				Set<Integer> vEdges = nodesMap.get(v);
-
 				if (vEdges == null) {
-
 					vEdges = new HashSet<>();
-
 				}
-
 				vEdges.add(u);
-
 				nodesMap.put(v, vEdges);
-
 			}
-
 			rootNode = new TreeNode(nodeValues[0], nodeColors[0], 0);
-
 			Set<Integer> rootEdges = nodesMap.get(1);
-
 			Iterator<Integer> rootIterator = rootEdges.iterator();
-
 			while (rootIterator.hasNext()) {
-
 				Integer nodeIdentifier = rootIterator.next();
-
 				nodesMap.get(nodeIdentifier).remove(1);
-
 				createEdge(rootNode, nodeIdentifier);
-
 			}
-
 		}
-
+		in.close();
 		return rootNode;
 
 	}

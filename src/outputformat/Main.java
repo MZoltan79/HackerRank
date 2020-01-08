@@ -15,7 +15,8 @@ public class Main {
              System.out.printf("%-15s%d %n", s1,x);
          }
          System.out.println("================================");
-         System.out.printf("%-30s%5d","Ez egy formázott float:", 50);
+         System.out.printf("%-30s%5d","this is a formatted float:", 50);
+         sc.close();
 	}
 
 }
